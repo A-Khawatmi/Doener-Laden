@@ -1,0 +1,551 @@
+body {
+    width: 100%;/*Breite von 100%*/
+    padding: 0;/*innenabstand 0*/
+    margin: 0 0;/*Ausenabstand 0*/
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 16px;
+    background-color: rgb(255, 255, 255);/*hintergrund-farbe*/
+    display: flex;
+    justify-content: center;
+    grid-template-columns: repeat;
+    grid-template-areas: "kopf kopf kopf"
+    /*Der Bereich "kopf" soll sich über drei Spalten erstrecken*/
+    "navigation artikel randnotiz"
+    /*selbsterklärend*/
+    "fuss fuss fuss"
+    /*selbsterklärend*/
+}
+
+.content {/*den ganzen inhalt steht darauf*/
+    background:linear-gradient(30deg, rgb(184, 184, 184), white 100%) ; /*hintergrund-farbe grau */
+    width: 100%;/*Breite von 100%*/
+    max-width: 1500px;/*maximum brreite 1500 pixel*/
+    height: auto;/*höhe automatisch */
+    margin: auto;/*Ausenabstand automatisch zentriert*/
+}
+
+header {/*oberer teil verschönen*/
+    grid-area: kopf;
+    /*Hier wird der header-Bereich mit dem Wort "kopf" gelabelt*/
+    background-color: rgb(0, 0, 0);/*hintergrund-farbe schwarz */
+    width: 100%;/*Breite von 100%*/
+    max-width: 1200px;/*maximum brreite 1200 pixel*/
+    margin: auto;/*Ausenabstand automatisch zentriert*/
+    height: 500px;/*höhe 500 pixel*/
+}
+
+nav {/*Navigation teil verschönern*/
+    grid-area: navigation;
+    /*Hier wird der nav-Bereich mit dem Wort "navigation" gelabelt*/
+    width: 100%;/*Breite von 100%*/
+    max-width: 1200px;/*maximum brreite 1200 pixel*/
+    margin: auto;/*Ausenabstand automatisch zentriert*/
+    position: absolute;/*position auf dem header bereich erscheinen */
+    top: 440px;/*440 pixel nach unten */
+}
+
+main {/*mittel teil verschönern*/
+    padding: 1px;/*innenabstand 1 px*/
+    background-color: rgb(253, 253, 253);/*hintergrund-farbe*/
+    width: 100%;/*Breite von 100%*/
+    max-width: 1200px;/*maximum brreite 1200 pixel*/
+    min-height: 1275px;/*minumum soll die höhe 1275px*/
+    margin: auto;/*Ausenabstand automatisch zentriert*/
+}
+
+main article {/*die bilder stehen darauf*/
+    float: left;/*bleib links, die andern kommen rechts da neben */
+    width: 100%;/*Breite von 100%*/
+    max-width: 300px;/*maximum brreite 300 pixel*/
+    height: auto;/*höhe automatisch */
+    margin-right: 6.3%;/*Ausenabstand nach rechts 6,3%*/
+    
+}
+
+main section {
+    width: 100%;/*Breite von 100%*/
+    max-width: 800px;/*maximum brreite 800 pixel*/
+    height: auto;/*höhe automatisch */
+}
+
+aside {/*für werbung oder mer info*/
+    padding: 0.1px;/*innenabstand 0.1 px*/
+    background: linear-gradient(30deg, rgb(250, 245, 181), white 90%);/*hintergrund-farbe mit model*/
+    width: 100%;/*Breite von 100%*/
+    max-width: 1200px;/*maximum brreite 1200 pixel*/
+    height: 330px;/*höhe 330px */
+    margin: auto;/*Ausenabstand automatisch zentriert*/
+}
+
+footer {/*unter teil aufbauen*/
+    grid-area: fuss;
+    /*Hier wird der footer-Bereich mit dem Wort "fuss" gelabelt*/
+    background-color: rgb(255, 255, 255);/*hintergrund-farbe  */
+    width: 100%;/*Breite von 100%*/
+    max-width: 1200px;/*maximum brreite 1200 pixel*/
+    margin: auto;/*Ausenabstand automatisch zentriert*/
+    padding: 0.1px;/*innenabstand 0.1 px*/
+}
+
+.col-lg-4, .col-lg-6, .col-md-4, .col-md-6, .col-sm-6, .col-12 {/*für Responsive*/
+    width: 100%;/*Breite von 100%*/
+}
+
+.window-img {/*das haupt bild im header*/
+    width: 100%;/*Breite von 100%*/
+    max-width: 1200px;/*maximum brreite 1200 pixel*/
+    height: 600px;/*höhe 600px */
+    position: absolute;/*position auf dem bereich erscheinen */
+    margin-top: -100px;/*Ausenabstand nach oben 100 px*/
+}
+
+.tm-site-text-box {/*das logo text links unten*/
+    display: inline-block;/*rechts schreiben lassen neben einander*/
+    
+}
+
+.tm-header {/*der oberer teil von main */
+    position: absolute; /*position auf dem bereich erscheinen */
+    width: 100%;/*Breite von 100%*/
+    color: white;/*farbe*/
+    padding: 350px 50px;/*innenabstand 350px von oben unten & 50px von links rechts*/
+}
+
+.tm-site-logo {/*das logo bild links unten*/
+    margin-right: 5px;/*Ausenabstand nach rechts 5px*/
+    width: 100%;/*Breite von 100%*/
+    max-width: 130px;/*maximum brreite 135 pixel*/
+}
+
+.tm-site-title {
+    color: white;/*farbe*/
+    font-size: 2.2rem;/*schrifft größe*/
+    font-weight: 500;/*schrifft fett*/
+    margin-bottom: -15px;/*Ausenabstand nach oben 15px%*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;/*schrifft Art*/
+}
+
+.tm-site-description {
+    color: white;/*farbe*/
+    font-size: 1.1rem;/*schrifft größe*/
+    font-weight: 400;/*schrifft fett*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;/*schrifft Art*/
+}
+
+.tm-nav {/**/
+    margin-top: 20px;/*Ausenabstand nach unten 20 px*/
+}
+
+.tm-nav-ul {
+    display: flex;/*neben eindander*/
+    justify-content: flex-end; /*ganz rechts*/
+}
+
+.tm-nav-li {
+    list-style: none;/*punkt verswenden*/
+    margin-bottom: 0;/*Ausenabstand nach unten 0*/
+    padding-right: 25px;/*Innenabstand nach rechts 25px*/
+    padding-left: 25px;/*Ausenabstand nach links 25px*/
+    
+}
+
+
+@media (max-width: 991px) {
+    .tm-nav-li {
+        padding-right: 15px;/*Innenabstand nach rechts 15px*/
+        padding-left: 15px;/*Ausenabstand nach links 15px*/
+    }
+}
+
+.tm-nav-link {
+    color: white;/*farbe*/
+    text-decoration: none;
+    /*unterschtrisch verschwenden*/
+}
+.tm-nav-link:hover, .tm-nav-link.active{
+    opacity: 0.8;/*durch sichtig*/
+    border-bottom: 1px solid white;/*ein schtrisch unter*/
+}
+
+
+/*Media: (keine Zeit mehr)*/
+
+.tm-section, .tm-container-inner, .tm-container-inner-2 {
+    margin-left: auto;/*Ausenabstand nach links 0*/
+    margin-right: auto;/*Ausenabstand nach rechts 0*/
+}
+
+/* Small(landscape phones, 576px and up) */
+
+@media (min-width: 576px) {/*von 768px und über(tablets)*/
+    .tm-gallery-page {/**/
+        max-width: 560px; /*maximum brreite 560 pixel*/
+    }
+}
+
+
+
+@media (min-width: 768px) {/*von 768px und über(tablets)*/
+    .tm-gallery-page, .tm-section, .tm-container-inner, .tm-container-inner-2 {
+        max-width: 840px;/*maximum brreite 840 pixel*/
+    }
+}
+
+/* Large(desktops, 992px and up) */
+
+@media (min-width: 992px) {
+    .tm-gallery-page, .tm-section {
+        max-width: 1120px;
+    }
+    .tm-container-inner {
+        max-width: 1120px;
+    }
+    .tm-container-inner-2 {
+        max-width: 900px;
+    }
+}
+
+/*Home*/
+
+.background-lin {
+    width: 100%;/*Breite von 100%*/
+    background: linear-gradient(170deg, rgb(172, 172, 172), white 90%);/*hintergrund-farbe mit modell*/
+    padding: 0 0 40px 0;/*innenabstand 40px von unten */
+    max-width: 1200px;/*maximum brreite 1200 pixel*/
+    margin-bottom: 3%;;/*Ausenabstand nach unten 3%*/
+    margin-top: -1.3%;;/*Ausenabstand nach oben 1.3%*/
+}
+
+.tm-men-title {
+    font-size: 2rem;/*schrifft größe*/
+    font-weight: 400;/*schrifft fett*/
+    margin: 20px 0 20px -50px;/*Ausenabstand nach oben & unten 20px links und rechts verkleineren 50px*/
+    padding: 20px 0 ;/*innenabstand 20px von oben unten & 0px von links rechts*/
+}
+
+.men-left {/*Unser öffnungzeiten*/
+    width: 100%;/*Breite von 100%*/
+    max-width: 500px;/*maximum brreite 500 pixel*/
+    float: left;/*bleib links, die andern kommen rechts da neben */
+    font-size: 1.1rem;/*schrifft größe*/
+    font-weight: 700;/*schrifft fett*/
+}
+
+.men-right {/*telefonische bestellung*/
+    display: inline-block;/*rechts schreiben lassen neben einander*/
+    width: 100%;/*Breite von 100%*/
+    max-width: 500px;/*maximum brreite 500 pixel*/
+    font-size: 1.1rem;/*schrifft größe*/
+    font-weight: 700;/*schrifft fett*/
+    
+}
+
+.tm-time {/*telefonische bestellung & Unser öffnungzeiten*/
+    margin-top: 5%;/*Ausenabstand nach unten 5%*/
+}
+
+.tm-left {
+    margin-left: -25%; /*Ausenabstand rechts 25%*/
+}
+
+.angebot {
+    margin-top: 20px;;/*Ausenabstand nach unten 20 px*/
+    padding: 15px 0;/*innenabstand 15px von oben unten & 0px von links rechts*/
+    width: 310px;/*breite 310px*/
+    margin-left: 75px;/*Ausenabstand links 75px*/
+}
+
+.ud-gallery {
+    width: 100%;/*Breite von 100%*/
+    margin-left: 15%;/*Ausenabstand links 15%*/
+    max-width: 768px;/*maximum brreite 768 pixel*/
+    background: linear-gradient(178deg, rgb(0, 0, 0), rgb(112, 112, 112) 90%);/*hintergrund-farbe mit modell*/
+    padding: 0;/*innenabstand 0 überall*/
+}
+
+.id-img {
+    width: 251px;
+    height: auto; /*höher auto */
+    float: left;/*bleib links, die andern kommen rechts da neben */
+    margin: 0 5px 5px 0;/*Ausenoben 0 rechts 5px unten 5px links 0*/
+}
+
+.id-img:hover {
+    opacity: 0.6; /*durch sichtig*/
+}
+
+.id-img:last-child {
+    margin: 0 ;/* Ausenabstande 0 */
+}
+
+.id-img a img {
+    width: 100%;/*Breite von 100%*/
+    height: auto;/*höher auto*/
+    vertical-align: bottom;
+    /*vom unten sauber*/
+}
+
+.id-img-window {
+    width: 100%;/*Breite von 100%*/
+    position: absolute; /*position auf dem bereich erscheinen */
+    margin-left: 15%;/*Ausenabstand links 15%*/
+    max-width: 820px;/*maximum brreite 820 pixel*/
+    height: 500px; /*höhe 500px */
+    background: rgb(1, 1, 1);/*hintergrund-farbe*/
+    padding: 10px;/*innenabstand 10px von oben unten */
+    transform: scale(0, 0);/*hat kein wert und kann sich nicht anzeigen*/
+    transition: all 300ms ease-in-out; /*schöne öffnung*/
+   
+}
+
+.id-img-window img {
+    width: 100%;/*Breite von 100%*/
+    height: auto;/*höhe auto*/
+}
+
+.id-img-window nav {
+    width: 100%;/*Breite von 100%*/
+    color: white;/*farbe*/
+}
+
+.bild-nav p {
+    margin: 0 0 0 0;/*0 Ausenabstande*/
+    padding: 0;/*innenabstand 0*/
+}
+
+.bild-nav a {
+    text-decoration: none;/*unterschtrisch verschwenden*/
+    color: rgb(255, 255, 255);/*farbe*/
+    background-color: rgb(0, 0, 0);/*hintergrund-farbe*/
+    padding: 1px;/*innenabstand 1px von oben unten */
+    font-size: 1rem;/*schrifft größe*/
+}
+
+.tm-right-close {
+    float: right;/*bleib links, die andern kommen rechts da neben */
+    
+}
+
+.id-img-window:target {
+    opacity: 1;/*durch sichtig*/
+    transform: scale(1, 1);/*hat wert und kann sich anzeigen*/
+}
+
+.tm-feature {
+    position: absolute; /*position auf dem bereich erscheinen */
+    text-align: center;/*text zentrieren*/
+    margin: 800px 300px; /*Ausenabstnd oben & unten 800px links & rechts 300px*/
+}
+
+.tm-btn {
+    font-size: 1rem;/*schrifft größe*/
+    padding: 10px 30px; /*innenabstand 10px von oben unten & 30px von links rechts*/
+    text-decoration: none;/*unterschtrisch verschwenden*/
+}
+
+.tm-btn-success {
+    background-color: rgb(26, 175, 6);/*hintergrund-farbe*/
+    color: white;/*farbe*/
+}
+
+.tm-feature-description {
+    font-size: 1.3rem;/*schrifft größe*/
+    font-weight: 600;/*schrifft fett*/
+    color: rgb(0, 122, 10);/*farbe*/
+}
+
+.tm-history-img {
+    float: left;/*bleib links, die andern kommen rechts da neben */
+    padding: 10px;/*innenabstand 10px */
+}
+
+.tm-history-title {
+    font-size: 1.6rem;/*schrifft größe*/
+    font-weight: 300;/*schrifft fett*/
+    color: #1A6692;/*farbe*/
+    margin-bottom: 30px;/*Ausenabstand nach unten 30px*/
+}
+
+.tm-history-text {
+    max-width: 1000px;/*maximum brreite 780 pixel*/
+    margin: 15px 0;/*Ausenabstnd oben & unten 15px links & rechts 0*/
+}
+
+/*Karte*/
+
+.text-center {
+    text-align: center;/*text zentrieren*/
+}
+
+.tm-section-title {
+    margin-left: 22%;/*Ausenabstand links 22%*/
+    width: 100%;/*breite 100%*/
+    max-width: 50%;/*maximum-breite 50%*/
+    font-size: 1.1rem;/*schrifft größe*/
+    margin-bottom: 50px;/*Ausenabstand nach unten 50px*/
+}
+
+
+.tm-person-name {/**/
+    font-size: 1.6rem;/*schrifft größe*/
+    font-weight: 300;/*schrifft fett*/
+    color: #C39;/*farbe*/
+    margin-bottom: 5px;/*Ausenabstand nach unten 5px*/
+    margin-top: 15px;;/*Ausenabstand nach oben 15 px*/
+}
+.angebot {
+    color: red;/*farbe*/
+
+}
+
+
+
+.tm-person-title {
+    color: #09C;/*farbe*/
+    margin-bottom: 20px;/*Ausenabstand nach unten 20px*/
+    width: 300px;/*breite 300px*/
+}
+
+.tm-gallery-price {
+    font-size: 1.25rem;/*schrifft größe*/
+    color: #2F956D;/*farbe*/
+    margin-bottom: 60px;/*Ausenabstand nach unten 60px*/
+    text-decoration: nonel;/*unterschtrisch verschwenden*/
+}
+
+.tm-description-figure {
+    float: left;/*bleib links, die andern kommen rechts da neben */
+    margin-top: -30px;;/*Ausenabstand nach oben 30 px*/
+}
+
+.tm-description-box {
+    width: 100%;/*Breite von 100%*/
+    max-width: 950px;/*maximum brreite 950 pixel*/
+    margin-top: 50px;;/*Ausenabstand nach unten 50 px*/
+}
+
+.tm-qualli-title {
+    font-size: 1.3rem;/*schrifft größe*/
+    font-weight: 400;/*schrifft fett*/
+    color: #1A6692;/*farbe*/
+    margin-bottom: 25px;/*Ausenabstand nach unten 25px*/
+}
+
+.tm-mb-45 {
+    margin-bottom: 45px;/*Ausenabstand nach unten 45x*/
+    font-size: 1rem;/*schrifft größe*/
+}
+
+.tm-btn-default:hover, .tm-btn-default:focus {
+    color: white;/*farbe*/
+    background-color: #98999A;/*hintergrund-farbe*/
+}
+
+/*kontakt*/
+
+.form-group {
+    margin-bottom: 30px;/*Ausenabstand nach unten 30px*/
+}
+
+.form-control {
+    margin-left: 10%;/*Ausenabstand links 10%*/
+    padding: 15px 0;/*innenabstand 15px von oben unten */
+    width: 100%;/*Breite von 100%*/
+    max-width: 400px;/*maximum brreite 400 pixel*/
+    font-size: 1.1rem;/*schrifft größe*/
+    font-weight: 400;/*schrifft fett*/
+    line-height: 1.5;/*wie hoch die line*/
+    color: #626364;/*farbe*/
+    background-color: #fff;/*hintergrund-farbe*/
+    border: 1px solid #ced4da;/*unter schtrisch*/
+    border-right: 0;/*strich verschwenden rechts*/
+    border-top: 0;/*strich verschwenden oben*/
+    border-left: 0;/*strich verschwenden links*/
+    transition: border-color 1.0s ease-in-out;/*schöner blinden 1s dauern*/
+    width: 450px;/*breite 450px*/
+}
+
+.tm-d-flex {
+    margin-left: 30%;/*Ausenabstand links 30%*/
+}
+
+.tm-address-box {
+    max-width: 100%;/*maximum brreite 100 prtzent*/
+    padding-left: 70%;/*innenabstand links 70%*/
+
+}
+.tm-info-title {
+    font-size: 1.6rem;/*schrifft größe*/
+    font-weight: 300;/*schrifft fett*/
+    margin-bottom: 30px;/*Ausenabstand nach unten 30px*/
+}
+
+@media (min-width: 768px) {
+    .tm-address-box {
+        max-width: 315px;/*maximum brreite 315 pixel*/
+    }
+}
+
+.tm-contact-icon {
+    display: inline-block;/*rechts schreiben lassen neben einander*/
+    margin-right: 25px;/*Ausenabstand nach rechts 25px*/
+    color: #319966;/*farbe*/
+}
+
+.tm-contact-link {
+    display: inline-block;/*rechts schreiben lassen neben einander*/
+    color: #626364;/*farbe*/
+    margin-bottom: 25px;/*Ausenabstand nach unten 25px*/
+    text-decoration: none;/*unterschtrisch verschwenden*/
+}
+
+.tm-map {
+    max-width: 900px;/*maximum brreite 900 pixel*/
+    height: 450px; /*höhe 450px */
+    width: 100%;/*Breite von 100%*/
+    margin: auto;/*Ausenabstand automatisch*/
+}
+
+
+.tm-map iframe {
+    width: 100%;/*Breite von 100%*/
+    height: 100%;/*höhe 100% */
+}
+
+/*mehr*/
+
+
+table{
+    height: 100%;/*höhe 100% */
+    min-height: 1000px;/*minumum soll die höhe 1000px*/
+}
+
+table, th, td{
+    border-collapse: collapse;
+    margin-top: 1%; ;/*Ausenabstand nach unten 1 px*/
+	width: 100%;/*Breite von 100%*/
+    max-width: 70%;/*maximum brreite 70%*/
+    margin: auto;/*Ausenabstand automatisch*/
+	border: 1px solid white;
+	color: rgb(255, 255, 255);/*farbe*/
+	background-color: rgba(0, 0, 0, 0.3);/*hintergrund-farbe*/
+	height: 25px;/*höhe 25px */
+}
+
+
+table, th		
+{
+    
+	background: linear-gradient(175deg, rgb(0, 0, 0), white 90%);
+}
+table, td		
+{
+    padding: 20px 10px;/*innenabstand 20px von oben unten & 10px von links rechts*/
+	width: 850px;/*breite 850px*/
+}
+.tm-top{
+   margin-top:1.5% ;;/*Ausenabstand nach unten 1.5 %*/
+}
+main .tm-mehr{
+    max-height: 50%;/*maximum höher 50 protzent*/
+}

@@ -1,2 +1,2 @@
 # web
- https://github.com/A-Khawatmi/Khawatmi
+https://A-Khawatmi.github.io/Khawatmi/
